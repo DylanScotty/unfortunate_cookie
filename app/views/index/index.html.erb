@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Misfortune</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: darkred;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      text-decoration: none;
+      background-color: darkred;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to Misfortune</h1>
+    <p>Choose your destiny:</p>
+    <div>
+      <%= link_to 'Evil 8-Ball', magic8_ball_path, class: 'btn' %>
+      <%= link_to 'Unfortunate Cookie', fortune_cookie_path, class: 'btn' %>
+    </div>
+  </div>
+
+</body>
+</html>

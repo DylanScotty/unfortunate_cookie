@@ -1,10 +1,13 @@
 class Response < ApplicationRecord
     DEFAULT_RESPONSES = [
-      "Yes",
-      "No",
-      "Ask again later",
-      "Cannot predict now",
-      "Don't count on it",
-      "My Sources say no",
+      "Only if you sell your soul",
+      "Yes with conditions",
+      "Most likely not",
+      "Signs point to absolutely not",
+      "With a doubt",
+      "Reply hazy, try again",
+      "Better not tell you now",
+      "Concentrate and ask again",
+      "My reply is no"
     ].freeze
 end

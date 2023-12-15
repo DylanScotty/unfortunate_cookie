@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_15_163624) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_15_173748) do
+  create_table "fortunecookies", force: :cascade do |t|
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "responses", force: :cascade do |t|
     t.string "message"
     t.datetime "created_at", null: false
