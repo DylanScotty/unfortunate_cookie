@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic 8-Ball</title>
+  <style>
+    body {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #magic8ball {
+      width: 250px; 
+      height: 250px; 
+    }
+
+    form {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img id="magic8ball" src="<%= asset_path('magic8ball.png') %>" alt="Magic 8-Ball">
+    <h1>Magic 8-Ball</h1>
+    <form>
+      <label for="question">Ask a question:</label>
+      <br>
+      <input type="text" id="question" placeholder="Type your question">
+      <br>
+      <button type="button" onclick="getAnswer()">Get Answer</button>
+    </form>
+    <p id="answer"><%= @response %></p>
+  </div>
+
+  <script>
+    function getAnswer() {
+      var responses = <%= Response::DEFAULT_RESPONSES.to_json %>;
+      var randomIndex = Math.floor(Math.random() * responses.length);
+      var answer = responses[randomIndex];
+      document.getElementById('answer').innerHTML = answer;
+    }
+  </script>
+</body>
+</html>
