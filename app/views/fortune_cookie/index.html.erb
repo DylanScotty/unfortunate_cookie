@@ -17,7 +17,7 @@
     }
 
     div {
-      text-align: center; /* Center the content within the div */
+      text-align: center; 
     }
 
     form {
@@ -28,15 +28,15 @@
 <body>
   <script>
     function getFortune() {
-      console.log('getFortune() called'); // Check if the function is called
+      console.log('getFortune() called');
       var fortunes = <%= raw Fortunecookie::DEFAULT_FORTUNES.to_json %>;
       var randomIndex = Math.floor(Math.random() * fortunes.length);
       var fortune = fortunes[randomIndex];
-      console.log('Fortune:', fortune); // Check the retrieved fortune
+      console.log('Fortune:', fortune); 
       document.getElementById('fortune').innerText = fortune;
     }
   </script>
-  
+
   <div>
     <img id="fortuneCookie" src="<%= asset_path('fortune_cookie.png') %>" alt="Fortune Cookie">
     <h1>Unfortunate Cookie</h1>
